@@ -36,17 +36,50 @@ Before running the project, you need to have the following installed:
 1. Clone this repository:
 
    ```bash
-   git clone <repository_url>
+   git clone 'https://github.com/waqqasansari/Django_chatbot_APIs.git'
+   ```
+
+   **Configure your database settings in **ChatbotAPI/settings.py**. Use PostgreSQL or your preferred database**
+
+    <!-- ```bash
+   cd ChatbotAPI
+   pip install -r requirements.txt
+   python manage.py migrate
+   python manage.py runserver
+   ``` -->
+
+   Goto ChatbotAPI folder
+
+   ```bash
    cd ChatbotAPI
    ```
 
-## API Endpoints
+   Install all the required requirements
 
-- `/api/chat/`: POST endpoint for sending messages to the chatbot.
-- `/api/chat/history/`: GET endpoint to retrieve chat history from the database.
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+   Run migrations to create the database tables
+
+   ```bash
+   python manage.py migrate
+   ```
+
+   Start the development server
+
+   ```bash
+   python manage.py runserver
+   ```
 
 ## Usage
 
 1. Access the chat interface at `http://127.0.0.1:8000/api/chat/` in your web browser.
 2. Interact with the chatbot by entering messages in the input field.
-3. Access the chat history at `http://127.0.0.1:8000/api/chat/`
+3. If you are using it first time then it will download **microsoft/DialoGPT-large** pre-trained model.
+4. Access the chat history at `http://127.0.0.1:8000/api/chat/`
+
+## API Endpoints
+
+- `/api/chat/`: POST endpoint for sending messages to the chatbot.
+- `/api/chat/history/`: GET endpoint to retrieve chat history from the database.
